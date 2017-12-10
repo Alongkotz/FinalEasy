@@ -48,9 +48,6 @@ public class InsertActivity2 extends AppCompatActivity {
     private void insertData(){
         String name = et_name.getText().toString();
         String pass = et_pass.getText().toString();
-        int mon = Integer.parseInt(pass);
-        MainActivity aon = new MainActivity();
-        aon.setMo(mon);
         if(!name.isEmpty()&&!pass.isEmpty()){
             DatabaseHelper helper = new DatabaseHelper(this);
             helper.insertUser(name,pass);
